@@ -1,6 +1,6 @@
 'use client'
 export default function Header() {
-    const items = ["Inicio", "Lugares", "Eventos"];
+    const items = ["Inicio", "Lugares", "Eventos", "Ojos Cerrados"];
 
     function openNav() {
         const navMob = document.querySelector(".navMob");
