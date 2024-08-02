@@ -1,6 +1,6 @@
 'use client'
 export default function Header() {
-    const items = ["Inicio", "Lugares", "Eventos", "Ojos Cerrados"];
+    const items = ["Lugares", "Eventos", "Ojos Cerrados"];
 
     function openNav() {
         const navMob = document.querySelector(".navMob");
@@ -20,6 +20,9 @@ export default function Header() {
                 <button onClick={openNav} className="openNavMob">Menu</button>
                 <nav className="navMob">
                     <ul>
+                        <li>
+                            <a href="/">Inicio</a>
+                        </li>
                         {items.map((item) => (
                             <li key={item}>
                                 <a href={`/${item.toLowerCase()}`}>{item}</a>
@@ -29,6 +32,9 @@ export default function Header() {
                 </nav>
                 <nav className="navDesk">
                     <ul>
+                        <li>
+                            <a href="/">Inicio</a>
+                        </li>
                         {items.map((item) => (
                             <li key={item}>
                                 <a href={`/${item.toLowerCase()}`}>{item}</a>
