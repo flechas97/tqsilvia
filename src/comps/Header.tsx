@@ -1,4 +1,8 @@
 'use client'
+
+import Image from "next/image";
+
+
 export default function Header() {
     const items = ["Lugares", "Eventos", "Ojos Cerrados"];
 
@@ -17,7 +21,10 @@ export default function Header() {
             </div>
             <div>
 
-                <button onClick={openNav} className="openNavMob">Menu</button>
+                <button onClick={openNav} className="openNavMob">
+                    <Image src="/menu.png" alt="menu" width={40} height={40} />
+                </button>
+
                 <nav className="navMob">
                     <ul>
                         <li>

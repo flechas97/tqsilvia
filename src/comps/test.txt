@@ -1,0 +1,56 @@
+// Tu clave de API de Flickr
+const apiKey = 'ca89d86c9fbfedbd4794147b6604f361';
+
+// Nombre de usuario de Flickr
+const username = 'roberto.bermejo97';
+
+// Función para obtener el NSID del usuario
+const getUserId = async (username) => {
+    const url = `https://api.flickr.com/services/rest/?method=flickr.people.findByUsername&api_key=${apiKey}&username=${username}&format=json&nojsoncallback=1`;
+    try {
+        const response = await fetch(url);
+        const data = await response.json();
+        if (data.user) {
+            return data.user.nsid;
+        } else {
+            console.error("No se encontró el usuario");
+            return null;
+        }
+    } catch (error) {
+        console.error("Error en la solicitud:", error);
+        return null;
+    }
+};
+
+// Función para obtener las fotos del usuario
+const getUserPhotos = async (userId) => {
+    const url = `https://api.flickr.com/services/rest/?method=flickr.people.getPhotos&api_key=${apiKey}&user_id=${userId}&format=json&nojsoncallback=1&per_page=10&page=1`;
+    try {
+        const response = await fetch(url);
+        const data = await response.json();
+        if (data.photos) {
+            return data.photos.photo;
+        } else {
+            console.error("No se encontraron fotos para el usuario");
+            return [];
+        }
+    } catch (error) {
+        console.error("Error en la solicitud:", error);
+        return [];
+    }
+};
+
+// Función principal para ejecutar el proceso
+const fetchUserPhotos = async () => {
+    const userId = await getUserId(username);
+    if (userId) {
+        const photos = await getUserPhotos(userId);
+        photos.forEach(photo => {
+            const photoUrl = `https://live.staticflickr.com/${photo.server}/${photo.id}_${photo.secret}.jpg`;
+            console.log(photoUrl);
+        });
+    }
+};
+
+// Ejecutar la función principal
+fetchUserPhotos();
