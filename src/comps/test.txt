@@ -54,3 +54,53 @@ const fetchUserPhotos = async () => {
 
 // Ejecutar la función principal
 fetchUserPhotos();
+
+
+
+
+
+
+    const apiKey = 'ca89d86c9fbfedbd4794147b6604f361';  // Reemplaza con tu clave de API de Flickr
+        const username = 'roberto.bermejo97';  // Reemplaza con el nombre de usuario de Flickr
+
+        async function fetchUserId(apiKey, username) {
+            const url = `https://www.flickr.com/services/rest/?method=flickr.people.findByUsername&api_key=${apiKey}&username=${username}&format=json&nojsoncallback=1`;
+            try {
+                const response = await fetch(url);
+                const data = await response.json();
+                return data.user.nsid;
+            } catch (error) {
+                console.error('Error fetching user ID:', error);
+                return null;
+            }
+        }
+
+        async function fetchAlbums(apiKey, userId) {
+            const url = `https://www.flickr.com/services/rest/?method=flickr.photosets.getList&api_key=${apiKey}&user_id=${userId}&format=json&nojsoncallback=1`;
+            try {
+                const response = await fetch(url);
+                const data = await response.json();
+                return data.photosets.photoset;
+            } catch (error) {
+                console.error('Error fetching albums:', error);
+                return [];
+            }
+        }
+
+        function logAlbums(albums) {
+            albums.forEach(album => {
+                console.log(`Title: ${album.title._content}`);
+                console.log(`Description: ${album.description._content}`);
+                console.log('-------------------------');
+            });
+        }
+
+        document.addEventListener('DOMContentLoaded', async () => {
+            const userId = await fetchUserId(apiKey, username);
+            if (userId) {
+                const albums = await fetchAlbums(apiKey, userId);
+                logAlbums(albums);
+            } else {
+                console.error('Could not fetch user ID');
+            }
+        });

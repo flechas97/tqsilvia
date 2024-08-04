@@ -67,7 +67,7 @@ main{
   padding: 70px 1rem;
   width: 100%;
   max-width: 1200px;
-  height: 100vh;
+  /* height: 100vh; */
   margin: auto;
   background-color: #ffd1d9;
 }
@@ -87,7 +87,13 @@ main{
   margin-bottom: 1rem;
 
 }
+.foto img{
+  width: 100%;
 
+}
+.album-cover img{
+  width: 100%;
+}
 .cards{
   display: flex;
   justify-content: center;
