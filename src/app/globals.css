@@ -22,6 +22,7 @@ header{
   top: 0;
   z-index: 1000;
   height: 60px;
+  box-shadow: rgba(255, 255, 255, 0.913) 0px 2px 15px 0px;
 }
 header h1{
   font-size: 1.5rem;
@@ -71,6 +72,7 @@ main{
   /* height: 100vh; */
   margin: auto;
   background-color: #ffd1d9;
+  box-shadow: rgba(99, 99, 99, 0.964) 0px 2px 15px 0px;
 }
 .navMob, .openNavMob{
   display: none;
@@ -135,14 +137,14 @@ main{
   justify-content: center;
   align-items: center;
   width: 100%;
-  height: 300px;
+  height: 400px;
   background-color: #1d1d1d75;
   border-radius: 8px;
 overflow: hidden;
 box-shadow: rgba(99, 99, 99, 0.2) 0px 2px 8px 0px;
 }
 .album-cover img{
-  height: 300px;
+  height: 400px;
   
   /* max-width: 100%; */
 }
@@ -170,6 +172,44 @@ box-shadow: rgba(99, 99, 99, 0.2) 0px 2px 8px 0px;
   height: 100%;
   background-color: #ff289b;
 
+}
+@media screen and (min-width: 768px){
+  .hrwrapper{
+    width: 90%;
+  }
+  .btnVerFotos{
+    font-size: 1.2rem;
+    cursor: pointer;
+  }
+  .wrapperinfo{
+    display: flex;
+    flex-direction: column;
+    justify-content: space-around;
+  }
+  .wrapperinfo h2{
+    font-size: 32px;
+    color: black;
+  }
+  .wrapperinfo p{
+    font-size: 22px;
+    color: rgb(105, 105, 105);
+  }
+  .albums{
+    display: flex;
+    flex-wrap: wrap;
+    gap: 1rem;
+    justify-content: space-around;
+  
+  }
+  .album{
+    max-width: 1000px;
+    background-color: transparent;
+    border: none;
+    box-shadow: none;
+  }
+  .hrwrapper:nth-child(odd) .album:nth-child(odd){
+    flex-direction: row-reverse;
+  }
 }
 @media screen and (max-width: 768px){
   .album{
@@ -262,4 +302,7 @@ box-shadow: rgba(99, 99, 99, 0.2) 0px 2px 8px 0px;
     justify-content: center;
     font-weight: bold;
   }
+.album-cover {
+  max-width: 84vw;
+}
 }

@@ -85,6 +85,7 @@ export default function Home() {
       <div className="albums">
         {albums.length > 0 ? (
           albums.map((album: any) => (
+            <div className="hrwrapper">
             <div key={album.id} className="album">
               <div className="album-cover">
                 {album.coverPhoto ? (
@@ -104,12 +105,16 @@ export default function Home() {
            
           
               </div>
+          
+            </div>
+            <hr />
             </div>
           ))
         ) : (
           <p>Cargando...</p>
         )}
       </div>
+     
     </>
   );
 }
