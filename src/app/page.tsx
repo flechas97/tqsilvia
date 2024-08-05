@@ -93,15 +93,17 @@ export default function Home() {
                   <div>No Cover Photo</div>
                 )}
               </div>
+              <div>
               <h2>{album.title._content}</h2>
               <Link href={`/albunes/${album.id}`}>
                   <button>Ver Fotos</button>
               </Link>
               <p>{album.description._content}</p>
+              </div>
             </div>
           ))
         ) : (
-          <p>No se encontraron álbumes.</p>
+          <p>Cargando...</p>
         )}
       </div>
     </>

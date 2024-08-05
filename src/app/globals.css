@@ -91,8 +91,38 @@ main{
   width: 100%;
 
 }
-.album-cover img{
+.album{
   width: 100%;
+  display: flex;
+  justify-content: center;
+  gap: 1rem;
+  /* flex-wrap: wrap; */
+  background-color: #ff289b;
+  padding: 1rem;
+  border-radius: 8px;
+
+}
+.album h2{
+  color: white;
+}
+.albums{
+  display: flex;
+  flex-wrap: wrap;
+  gap: 1rem;
+}
+.album-cover{
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  width: 100%;
+  height: 300px;
+  background-color: #1d1d1d75;
+  border-radius: 8px;
+overflow: hidden;
+}
+.album-cover img{
+  height: 300px;
+  /* max-width: 100%; */
 }
 .cards{
   display: flex;
@@ -120,6 +150,9 @@ main{
 
 }
 @media screen and (max-width: 768px){
+  .album{
+    flex-wrap: wrap;
+  }
   .card{
     flex-wrap: wrap;
   }
