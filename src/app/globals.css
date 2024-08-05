@@ -67,6 +67,7 @@ main{
   padding: 70px 1rem;
   width: 100%;
   max-width: 1200px;
+  min-height: 100vh;
   /* height: 100vh; */
   margin: auto;
   background-color: #ffd1d9;
@@ -97,18 +98,37 @@ main{
   justify-content: center;
   gap: 1rem;
   /* flex-wrap: wrap; */
-  background-color: #ff289b;
+  background-color: #ff70bc81;
   padding: 1rem;
   border-radius: 8px;
-
+  border: 1px solid #ffffff;
+  box-shadow: rgba(99, 99, 99, 0.2) 0px 2px 8px 0px;
 }
 .album h2{
   color: white;
+  /* text-align: center; */
 }
 .albums{
   display: flex;
   flex-wrap: wrap;
   gap: 1rem;
+}
+.btnverWrapper{
+  width: 100%;
+  display: flex;
+  justify-content: end;
+  margin-top: 1.5rem;
+}
+.wrapperinfo{
+  width: 100%;
+}
+.btnVerFotos{
+  background-color: #ff289b;
+  color: white;
+  border: 1px solid whitesmoke;
+  padding: 0.5rem 1rem;
+  border-radius: 8px;
+  font-size: 16px;
 }
 .album-cover{
   display: flex;
@@ -119,9 +139,11 @@ main{
   background-color: #1d1d1d75;
   border-radius: 8px;
 overflow: hidden;
+box-shadow: rgba(99, 99, 99, 0.2) 0px 2px 8px 0px;
 }
 .album-cover img{
   height: 300px;
+  
   /* max-width: 100%; */
 }
 .cards{

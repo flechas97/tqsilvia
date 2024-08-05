@@ -93,12 +93,16 @@ export default function Home() {
                   <div>No Cover Photo</div>
                 )}
               </div>
-              <div>
+              <div className="wrapperinfo">
               <h2>{album.title._content}</h2>
-              <Link href={`/albunes/${album.id}`}>
-                  <button>Ver Fotos</button>
-              </Link>
               <p>{album.description._content}</p>
+              <div className="btnverWrapper">
+                <Link href={`/albunes/${album.id}`}>
+                    <button className="btnVerFotos">Ver Fotos</button>
+                </Link>
+              </div>
+           
+          
               </div>
             </div>
           ))
