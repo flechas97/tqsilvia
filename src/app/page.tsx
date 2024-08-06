@@ -6,7 +6,6 @@ export default function Home() {
   const [albums, setAlbums] = useState<any[]>([]);
   const apiKey = 'ca89d86c9fbfedbd4794147b6604f361';
   const username = 'roberto.bermejo97';
-
   useEffect(() => {
     const fetchData = async () => {
       try {
