@@ -79,6 +79,10 @@ export default function Home() {
 
   return (
     <>
+      <div className="wrapperContent intro">
+        <h1>¿Qué es esto?</h1>
+        <p>"Silvia y Roberto: Comparte y revive nuestros momentos especiales. Un álbum dedicado a nuestros viajes, fotos juntos y recuerdos inolvidables."</p>
+      </div>
       <div className="wrapperContent">
         <h1>Últimas Publicaciones</h1>
       </div>
@@ -95,17 +99,14 @@ export default function Home() {
                 )}
               </div>
               <div className="wrapperinfo">
-              <h2>{album.title._content}</h2>
-              <p>{album.description._content}</p>
-              <div className="btnverWrapper">
-                <Link href={`/albunes/${album.id}`}>
-                    <button className="btnVerFotos">Ver Fotos</button>
-                </Link>
+                <h2>{album.title._content}</h2>
+                <p>{album.description._content}</p>
+                <div className="btnverWrapper">
+                  <Link href={`/albunes/${album.id}`}>
+                      <button className="btnVerFotos">Ver Fotos</button>
+                  </Link>
+                </div>
               </div>
-           
-          
-              </div>
-          
             </div>
             <hr />
             </div>
