@@ -3,7 +3,9 @@ const MODAL_NAME = 'modal_video_container';
   const WIDGET_NAME = '.vreels';
      
   const config = { attributes: true, childList: true, subtree: false };
+
   var checkReelsAd = false; 
+
   const callback = (mutationList, _observer) => {
     for (const mutation of mutationList) {
       if (mutation.type === 'attributes' && mutation.attributeName === 'class') {
@@ -23,13 +25,11 @@ const MODAL_NAME = 'modal_video_container';
           console.log('%c Prisa_Brand_Solutions ', 'color: #fff; background-color: #03579e; border-radius: 4px; ', '--> ReelsAd widget found:', document.querySelectorAll(WIDGET_NAME)[0]);
           const _observer = new MutationObserver(callback);
             try{
-                    _observer.observe(document.getElementById(MODAL_NAME), config);
-                     observer.disconnect();
+                _observer.observe(document.getElementById(MODAL_NAME), config);
+                observer.disconnect();
             }catch(e){
                 console.log("error selector")
             }
-         
-         
         }
       }
     }
