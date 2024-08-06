@@ -11,6 +11,7 @@ export default function Page({ params }: any) {
   const apiKey = 'ca89d86c9fbfedbd4794147b6604f361';
 
   useEffect(() => {
+    document.title = "Álbum - " + albunid; // Cambiar el título de la página
     if (albunid) {
       const fetchPhotos = async () => {
         try {

@@ -7,7 +7,7 @@ import Link from "next/link";
 export default function Home() {
 
   useEffect(() => {
-
+      document.title = "lugares";
       console.log(lugares);
   },[])
 
