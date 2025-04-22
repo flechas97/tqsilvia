@@ -1,0 +1,11 @@
+{
+    "lugares":{
+        "nombre":"Fuentes Lynda Benglis",
+        "descripcion":"Fuentes de agua en la plaza de la ciudad de México",
+        "fecha":"2024-10-10",
+        "ubicacion":"19.432608,-99.133209",
+        "imagen":"https://upload.wikimedia.org/wikipedia/commons/4/4e/Fuentes_Lynda_Benglis.jpg",
+        "tipo":"escultura"
+
+    }
+}
