@@ -1,32 +1,31 @@
 {
-    "lugares":[{
-        "nombre":"Fuentes Lynda Benglis",
-        "albunid":"72177720319347833",
-        "descripcion":"Fuentes de agua",
-        "fecha":"2024-10-10",
-        "ubicacion":[-3.700332641601563,40.40666557196566],
-        "imagen":"https://upload.wikimedia.org/wikipedia/commons/4/4e/Fuentes_Lynda_Benglis.jpg",
-        "tipo":"escultura"
-
-    },
-    {
-        "nombre":"Galeria de colecciones reales palacio real",
-        "albunid":"72177720319347833",
-        "descripcion":"Fuentes de agua",
-        "fecha":"2024-10-10",
-        "ubicacion":[-3.700332641601563,40.40666557196566],
-        "imagen":"https://upload.wikimedia.org/wikipedia/commons/4/4e/Fuentes_Lynda_Benglis.jpg",
-        "tipo":"escultura"
-
-    },
-    {
-        "nombre":"Museo Romanticismo",
-        "albunid":"72177720319347833",
-        "descripcion":"Fuentes de agua",
-        "fecha":"2024-10-10",
-        "ubicacion":[-3.700332641601563,40.40666557196566],
-        "imagen":"https://upload.wikimedia.org/wikipedia/commons/4/4e/Fuentes_Lynda_Benglis.jpg",
-        "tipo":"escultura"
-
-    }]
+    "lugares": [
+        {
+            "nombre": "Granada",
+            "albunid": "72177720319347833",
+            "descripcion": "Viaje Granada",
+            "fecha": "XXXX-XX-XX",
+            "ubicacion": [-3.700332641601563, 40.40666557196566],
+            "imagen": "https://upload.wikimedia.org/wikipedia/commons/4/4e/Fuentes_Lynda_Benglis.jpg",
+            "tipo": "escultura"
+        },
+        {
+            "nombre": "Navidad",
+            "albunid": "72177720319347833",
+            "descripcion": "Navidad",
+            "fecha": "XXXX-XX-XX",
+            "ubicacion": [-3.700332641601563, 40.40666557196566],
+            "imagen": "https://upload.wikimedia.org/wikipedia/commons/4/4e/Fuentes_Lynda_Benglis.jpg",
+            "tipo": "escultura"
+        },
+        {
+            "nombre": "Escapadas",
+            "albunid": "72177720319347833",
+            "descripcion": "Escapadas",
+            "fecha": "XXXX-XX-XX",
+            "ubicacion": [-3.700332641601563, 40.40666557196566],
+            "imagen": "https://upload.wikimedia.org/wikipedia/commons/4/4e/Fuentes_Lynda_Benglis.jpg",
+            "tipo": "escultura"
+        }
+    ]
 }
