@@ -1,318 +1,312 @@
-@import url('https://fonts.googleapis.com/css2?family=Playwrite+AR:wght@100..400&family=Playwrite+US+Modern:wght@100..400&display=swap');
-*{
-  padding:0;
-  margin:0;
-  box-sizing: border-box;
-  font-family: "Playwrite US Modern", cursive;
+@import url("https://fonts.googleapis.com/css2?family=Playwrite+AR:wght@100..400&family=Playwrite+US+Modern:wght@100..400&display=swap");
+* {
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+    font-family: "Playwrite US Modern", cursive;
 }
 
-body{
-  background-color: #ff5f7a;
+body {
+    background-color: #ff5f7a;
 }
-header{
-  display: flex;
-  justify-content: center;
-  align-items: center;
-  padding: 1rem 2rem;
-  background-color: #ffe7f7aa;
-  border-bottom: 1px solid #ccc;
+header {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    padding: 1rem 2rem;
+    background-color: #ffe7f7aa;
+    border-bottom: 1px solid #ccc;
 
-  width: 100%;
-  position: fixed;
-  top: 0;
-  z-index: 1000;
-  height: 60px;
-  box-shadow: rgba(255, 255, 255, 0.913) 0px 2px 15px 0px;
+    width: 100%;
+    position: fixed;
+    top: 0;
+    z-index: 1000;
+    height: 60px;
+    box-shadow: rgba(255, 255, 255, 0.913) 0px 2px 15px 0px;
 }
-header h1{
-  font-size: 1.5rem;
-  font-weight: 500;
-  color: #333;
-
+header h1 {
+    font-size: 1.5rem;
+    font-weight: 500;
+    color: #333;
 }
-header .wrapheader{
-  display: flex;
-  align-items: center;
-  width: 1200px;
-  max-width: 1200px;
-  padding: 0rem 2rem;
+header .wrapheader {
+    display: flex;
+    align-items: center;
+    width: 1200px;
+    max-width: 1200px;
+    padding: 0rem 2rem;
 }
-header .wrapheader div:last-child{
-  display: flex;
-  align-items: center;
-  justify-content: end;
-  width: 100%;
+header .wrapheader div:last-child {
+    display: flex;
+    align-items: center;
+    justify-content: end;
+    width: 100%;
 }
-header .wrapheader div:first-child{
-  display: flex;
-  align-items: center;
-  justify-content: start;
-  width: 100%;
-
+header .wrapheader div:first-child {
+    display: flex;
+    align-items: center;
+    justify-content: start;
+    width: 100%;
 }
-nav ul{
-  display: flex;
-  align-items: center;
-  list-style: none;
-  gap: 2rem;
-
+nav ul {
+    display: flex;
+    align-items: center;
+    list-style: none;
+    gap: 2rem;
 }
 nav a {
-  text-decoration: none;
-  color: #333;
-  font-size: 1.2rem;
-  font-weight: 500;
-}
-main{
-  margin-top: 60px;
-  padding: 70px 1rem;
-  width: 100%;
-  max-width: 1200px;
-  min-height: 100vh;
-  /* height: 100vh; */
-  margin: auto;
-  background-color: #ffd1d9;
-  box-shadow: rgba(99, 99, 99, 0.964) 0px 2px 15px 0px;
-}
-.navMob, .openNavMob{
-  display: none;
-}
-
-.wrapperContent{
-  display: flex;
-  justify-content: center;
-
-}
-.wrapperContent h1{
-  font-size: 1.3rem;
-  font-weight: bold;
-  color: #ff289b;
-  margin-bottom: 1rem;
-
-}
-.foto img{
-  width: 100%;
-
-}
-hr{
-  width: 100%;
-  height: 1px;
-  background-color: #ffffff5e;
-  border: 1px solid #ffffff74;
-  margin: 1rem 0;
-
-}
-.album{
-  width: 100%;
-  display: flex;
-  justify-content: center;
-  gap: 1rem;
-  /* flex-wrap: wrap; */
-  background-color: #ff70bc81;
-  padding: 1rem;
-  border-radius: 8px;
-  border: 1px solid #ffffff;
-  box-shadow: rgba(99, 99, 99, 0.2) 0px 2px 8px 0px;
-}
-.album h2{
-  color: white;
-  /* text-align: center; */
-}
-.albums{
-  display: flex;
-  flex-wrap: wrap;
-  gap: 1rem;
-}
-.btnverWrapper{
-  width: 100%;
-  display: flex;
-  justify-content: end;
-  margin-top: 1.5rem;
-}
-.wrapperinfo{
-  width: 100%;
-}
-.wrapperinfo p {
-  color: rgb(70, 70, 70);
-}
-.btnVerFotos{
-  background-color: #ff289b;
-  color: white;
-  border: 1px solid whitesmoke;
-  padding: 0.5rem 1rem;
-  border-radius: 8px;
-  font-size: 16px;
-}
-.album-cover{
-  display: flex;
-  justify-content: center;
-  align-items: center;
-  width: 100%;
-  height: 400px;
-  background-color: #ffffff75;
-  border-radius: 8px;
-overflow: hidden;
-box-shadow: rgba(99, 99, 99, 0.2) 0px 2px 8px 0px;
-}
-.album-cover img{
-  height: 400px;
-  
-  /* max-width: 100%; */
-}
-.cards{
-  display: flex;
-  justify-content: center;
-  gap: 1rem;
-  flex-wrap: wrap;
-
-}
-.card{
-  width: 100%;
-  height: 300px;
-  background-color: #333;
-  display: flex;
-}
-.card img{
-  width: 90%;
-}
-.card div{
-  display: flex;
-  justify-content: center;
-  align-items: center;
-  width: 100%;
-  height: 100%;
-  background-color: #ff289b;
-
-}
-@media screen and (min-width: 768px){
-  .hrwrapper{
-    width: 90%;
-  }
-  .btnVerFotos{
+    text-decoration: none;
+    color: #333;
     font-size: 1.2rem;
-    cursor: pointer;
-  }
-  .wrapperinfo{
+    font-weight: 500;
+}
+main {
+    margin-top: 60px;
+    padding: 70px 1rem;
+    width: 100%;
+    max-width: 1200px;
+    min-height: 100vh;
+    /* height: 100vh; */
+    margin: auto;
+    background-color: #ffd1d9;
+    box-shadow: rgba(99, 99, 99, 0.964) 0px 2px 15px 0px;
+}
+.navMob,
+.openNavMob {
+    display: none;
+}
+
+.wrapperContent {
     display: flex;
+    justify-content: center;
+    align-items: center;
     flex-direction: column;
-    justify-content: space-around;
-  }
-  .wrapperinfo h2{
-    font-size: 32px;
-    color: black;
-  }
-  .wrapperinfo p{
-    font-size: 22px;
-  }
-  .albums{
+    text-align: center;
+    margin-bottom: 30px;
+}
+.wrapperContent h1 {
+    font-size: 1.3rem;
+    font-weight: bold;
+    color: #ff289b;
+    margin-bottom: 1rem;
+}
+.foto img {
+    width: 100%;
+}
+hr {
+    width: 100%;
+    height: 1px;
+    background-color: #ffffff5e;
+    border: 1px solid #ffffff74;
+    margin: 1rem 0;
+}
+.album {
+    width: 100%;
+    display: flex;
+    justify-content: center;
+    gap: 1rem;
+    /* flex-wrap: wrap; */
+    background-color: #ff70bc81;
+    padding: 1rem;
+    border-radius: 8px;
+    border: 1px solid #ffffff;
+    box-shadow: rgba(99, 99, 99, 0.2) 0px 2px 8px 0px;
+}
+.album h2 {
+    color: white;
+    /* text-align: center; */
+}
+.albums {
     display: flex;
     flex-wrap: wrap;
     gap: 1rem;
-    justify-content: space-around;
-  
-  }
-  .album{
-    max-width: 1000px;
-    background-color: transparent;
-    border: none;
-    box-shadow: none;
-  }
-  .hrwrapper:nth-child(odd) .album:nth-child(odd){
-    flex-direction: row-reverse;
-  }
 }
-@media screen and (max-width: 768px){
-  .album{
-    flex-wrap: wrap;
-  }
-  .card{
-    flex-wrap: wrap;
-  }
-  header{
-    padding: 0rem 1rem;
-    position: fixed;
-    z-index: 99999;
-  }
-  header .wrapheader{
+.btnverWrapper {
+    width: 100%;
     display: flex;
-    align-items: center;
+    justify-content: end;
+    margin-top: 1.5rem;
+}
+.wrapperinfo {
     width: 100%;
-
-    padding: 0rem 0rem;
-  }
-  main{
-    width: 100%;
-    padding: 70px 1rem;
-  }
-  header h1{
-    font-size: 18px;
-    width: 250px;
-    font-weight: bold;
-    color: #464646;
-  }
-  nav a {
-    text-decoration: none;
-    color: #333;
-    font-size: 0.9rem;
-    font-weight: 500;
-  }
-  .navDesk{
-    display: none;
-  }
-  .navMob{
-    /* display: block; */
-    position: fixed;
-    top: 60px;
-    left: 0;
-    background-color: #ff7bd541;
-    height: calc(100vh - 60px);
-    width: 100vw;
-    z-index: -1;
-  }
-  .openNavMob{
-    display: block;
-    position: relative;
-    top: 0;
-    right: 0;
-    padding: 1rem;
-    cursor: pointer;
-    z-index: 1000;
-    border: none;
-    background-color: transparent;
-   
-  }
-  .openNavMob img{
-    filter: invert(0.4) sepia(0.5) saturate(25) hue-rotate(287deg) brightness(0.95);
-  }
-  .openMenu{
-    display: block;
-  }
-  .navMob ul{
-    display: flex;
-    flex-direction: column;
-    gap: 0;
-    justify-content: start;
-    width: 100%;
-  }
-  .navMob ul li{
-    width: 100%;
-    height: 50px;
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    border: 1px solid #ccc;
-    background-color: rgba(255, 135, 191, 0.889);
-
-  }
-  .navMob ul li a{
-    width: 100%;
-    height: 50px;
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    font-weight: bold;
-  }
+}
+.wrapperinfo p {
+    color: rgb(70, 70, 70);
+}
+.btnVerFotos {
+    background-color: #ff289b;
+    color: white;
+    border: 1px solid whitesmoke;
+    padding: 0.5rem 1rem;
+    border-radius: 8px;
+    font-size: 16px;
+}
 .album-cover {
-  max-width: 84vw;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 100%;
+    height: 400px;
+    background-color: #ffffff75;
+    border-radius: 8px;
+    overflow: hidden;
+    box-shadow: rgba(99, 99, 99, 0.2) 0px 2px 8px 0px;
 }
+.album-cover img {
+    /* height: 400px; */
+    max-width: 100%;
+    /* max-width: 100%; */
+}
+.cards {
+    display: flex;
+    justify-content: center;
+    gap: 1rem;
+    flex-wrap: wrap;
+}
+.card {
+    width: 100%;
+    height: 300px;
+    background-color: #333;
+    display: flex;
+}
+.card img {
+    width: 90%;
+}
+.card div {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 100%;
+    height: 100%;
+    background-color: #ff289b;
+}
+@media screen and (min-width: 768px) {
+    .hrwrapper {
+        width: 90%;
+    }
+    .btnVerFotos {
+        font-size: 1.2rem;
+        cursor: pointer;
+    }
+    .wrapperinfo {
+        display: flex;
+        flex-direction: column;
+        justify-content: space-around;
+    }
+    .wrapperinfo h2 {
+        font-size: 32px;
+        color: black;
+    }
+    .wrapperinfo p {
+        font-size: 22px;
+    }
+    .albums {
+        display: flex;
+        flex-wrap: wrap;
+        gap: 1rem;
+        justify-content: space-around;
+    }
+    .album {
+        max-width: 1000px;
+        background-color: transparent;
+        border: none;
+        box-shadow: none;
+    }
+    .hrwrapper:nth-child(odd) .album:nth-child(odd) {
+        flex-direction: row-reverse;
+    }
+}
+@media screen and (max-width: 768px) {
+    .album {
+        flex-wrap: wrap;
+    }
+    .card {
+        flex-wrap: wrap;
+    }
+    header {
+        padding: 0rem 1rem;
+        position: fixed;
+        z-index: 99999;
+    }
+    header .wrapheader {
+        display: flex;
+        align-items: center;
+        width: 100%;
+
+        padding: 0rem 0rem;
+    }
+    main {
+        width: 100%;
+        padding: 70px 1rem;
+    }
+    header h1 {
+        font-size: 18px;
+        width: 250px;
+        font-weight: bold;
+        color: #464646;
+    }
+    nav a {
+        text-decoration: none;
+        color: #333;
+        font-size: 0.9rem;
+        font-weight: 500;
+    }
+    .navDesk {
+        display: none;
+    }
+    .navMob {
+        /* display: block; */
+        position: fixed;
+        top: 60px;
+        left: 0;
+        background-color: #ff7bd541;
+        height: calc(100vh - 60px);
+        width: 100vw;
+        z-index: -1;
+    }
+    .openNavMob {
+        display: block;
+        position: relative;
+        top: 0;
+        right: 0;
+        padding: 1rem;
+        cursor: pointer;
+        z-index: 1000;
+        border: none;
+        background-color: transparent;
+    }
+    .openNavMob img {
+        filter: invert(0.4) sepia(0.5) saturate(25) hue-rotate(287deg)
+            brightness(0.95);
+    }
+    .openMenu {
+        display: block;
+    }
+    .navMob ul {
+        display: flex;
+        flex-direction: column;
+        gap: 0;
+        justify-content: start;
+        width: 100%;
+    }
+    .navMob ul li {
+        width: 100%;
+        height: 50px;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        border: 1px solid #ccc;
+        background-color: rgba(255, 135, 191, 0.889);
+    }
+    .navMob ul li a {
+        width: 100%;
+        height: 50px;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        font-weight: bold;
+    }
+    .album-cover {
+        max-width: 84vw;
+    }
 }
