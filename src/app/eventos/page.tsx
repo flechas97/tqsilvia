@@ -1,16 +1,15 @@
+"use client";
 import Image from "next/image";
 import styles from "./page.module.css";
-import { useEffect } from "react";
+import {useEffect} from "react";
 export default function Home() {
+    useEffect(() => {
+        document.title = "Eventos";
+    }, []);
 
-  useEffect(() => {
-    document.title = "Eventos" ; 
-  },[])
-
-  return (
-    <>
-      <h1>eventos</h1>
-    </>
- 
-  );
+    return (
+        <>
+            <h1>eventos</h1>
+        </>
+    );
 }
