@@ -7,14 +7,14 @@
 }
 
 body {
-    background-color: #ff5f7a;
+    background-color: #ffffff;
 }
 header {
     display: flex;
     justify-content: center;
     align-items: center;
     padding: 1rem 2rem;
-    background-color: #ffe7f7aa;
+    background-color: #ffffffaa;
     border-bottom: 1px solid #ccc;
 
     width: 100%;
@@ -68,7 +68,7 @@ main {
     min-height: 100vh;
     /* height: 100vh; */
     margin: auto;
-    background-color: #ffd1d9;
+    background-color: #dee7ff;
     box-shadow: rgba(99, 99, 99, 0.964) 0px 2px 15px 0px;
 }
 .navMob,
@@ -87,7 +87,7 @@ main {
 .wrapperContent h1 {
     font-size: 1.3rem;
     font-weight: bold;
-    color: #ff289b;
+    color: #285aff;
     margin-bottom: 1rem;
 }
 .foto img {
@@ -106,7 +106,7 @@ hr {
     justify-content: center;
     gap: 1rem;
     /* flex-wrap: wrap; */
-    background-color: #ff70bc81;
+    background-color: #52abff81;
     padding: 1rem;
     border-radius: 8px;
     border: 1px solid #ffffff;
@@ -134,7 +134,7 @@ hr {
     color: rgb(70, 70, 70);
 }
 .btnVerFotos {
-    background-color: #ff289b;
+    background-color: #2890ff;
     color: white;
     border: 1px solid whitesmoke;
     padding: 0.5rem 1rem;
@@ -259,7 +259,7 @@ hr {
         position: fixed;
         top: 60px;
         left: 0;
-        background-color: #ff7bd541;
+        background-color: #7bdeff41;
         height: calc(100vh - 60px);
         width: 100vw;
         z-index: -1;
@@ -276,7 +276,7 @@ hr {
         background-color: transparent;
     }
     .openNavMob img {
-        filter: invert(0.4) sepia(0.5) saturate(25) hue-rotate(287deg)
+        filter: invert(0.4) sepia(0.5) saturate(25) hue-rotate(183deg)
             brightness(0.95);
     }
     .openMenu {
@@ -296,7 +296,7 @@ hr {
         align-items: center;
         justify-content: center;
         border: 1px solid #ccc;
-        background-color: rgba(255, 135, 191, 0.889);
+        background-color: rgba(135, 211, 255, 0.889);
     }
     .navMob ul li a {
         width: 100%;
@@ -309,4 +309,36 @@ hr {
     .album-cover {
         max-width: 84vw;
     }
+}
+
+.overlay {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100vw;
+    height: 100vh;
+    background: #000000;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-direction: column;
+    color: white;
+    z-index: 999999;
+}
+.countdown {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+}
+.countdown h2 {
+    font-size: 2rem;
+    margin-bottom: 1rem;
+    text-align: center;
+}
+
+.countdown p {
+    font-size: 1.5rem;
+    font-family: monospace;
+    text-align: center;
 }
