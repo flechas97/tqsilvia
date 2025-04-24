@@ -9,7 +9,7 @@ export default function Home() {
     const [showContent, setShowContent] = useState(false);
     const [countdown, setCountdown] = useState("");
 
-    const targetDate = new Date("2025-04-28T00:00:00"); // <-- AJUSTA ESTA FECHA
+    const targetDate = new Date("2025-04-27T00:00:00"); // <-- AJUSTA ESTA FECHA
     // const targetDate = new Date("2024-05-01T18:00:00"); // <-- AJUSTA ESTA FECHA
     useEffect(() => {
         const checkDate = () => {
