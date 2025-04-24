@@ -6,29 +6,45 @@ export default function Home() {
     const [albums, setAlbums] = useState<any[]>([]);
     const apiKey = "ca89d86c9fbfedbd4794147b6604f361";
     const username = "roberto.bermejo97";
-    const [showContent, setShowContent] = useState(false);
+    const [phase, setPhase] = useState<
+        "countdown1" | "between" | "countdown2" | "show"
+    >("countdown1");
+
     const [countdown, setCountdown] = useState("");
 
-    const targetDate = new Date("2025-04-27T00:00:00"); // <-- AJUSTA ESTA FECHA
+    const targetDate1 = new Date("2025-04-27T00:00:00"); // Primera cuenta
+
+    // const targetDate1 = new Date("2025-02-27T00:00:00"); // Primera cuenta
+
+    const targetDate2 = new Date("2025-05-02T18:00:00"); // Segunda cuenta
     // const targetDate = new Date("2024-05-01T18:00:00"); // <-- AJUSTA ESTA FECHA
     useEffect(() => {
-        const checkDate = () => {
+        const checkPhases = () => {
             const now = new Date();
-            const timeLeft = targetDate.getTime() - now.getTime();
-            if (timeLeft <= 0) {
-                setShowContent(true);
-            } else {
-                const days = Math.floor(timeLeft / (1000 * 60 * 60 * 24));
-                const hours = Math.floor((timeLeft / (1000 * 60 * 60)) % 24);
-                const minutes = Math.floor((timeLeft / 1000 / 60) % 60);
-                const seconds = Math.floor((timeLeft / 1000) % 60);
 
-                setCountdown(`${days}d ${hours}h ${minutes}m ${seconds}s`);
+            if (now < targetDate1) {
+                setPhase("countdown1");
+                updateCountdown(targetDate1);
+            } else if (now >= targetDate1 && now < targetDate2) {
+                setPhase("countdown2");
+                updateCountdown(targetDate2);
+            } else {
+                setPhase("show");
             }
         };
 
-        const interval = setInterval(checkDate, 1000);
-        checkDate(); // llama una vez al principio
+        const updateCountdown = (target: Date) => {
+            const now = new Date();
+            const timeLeft = target.getTime() - now.getTime();
+            const days = Math.floor(timeLeft / (1000 * 60 * 60 * 24));
+            const hours = Math.floor((timeLeft / (1000 * 60 * 60)) % 24);
+            const minutes = Math.floor((timeLeft / 1000 / 60) % 60);
+            const seconds = Math.floor((timeLeft / 1000) % 60);
+            setCountdown(`${days}d ${hours}h ${minutes}m ${seconds}s`);
+        };
+
+        const interval = setInterval(checkPhases, 1000);
+        checkPhases();
 
         return () => clearInterval(interval);
     }, []);
@@ -108,22 +124,42 @@ export default function Home() {
 
     return (
         <>
-            {!showContent && (
+            {(phase === "countdown1" || phase === "countdown2") && (
                 <div className="overlay">
                     <div className="countdown">
-                        <h1>Hola Marta</h1>
-                        <img
-                            src="https://images.vexels.com/media/users/3/136172/isolated/preview/148ec098a4529de7141003a8ec519d39-corazon-como-icono.png"
-                            alt=""
-                            width={100}
-                        />
-                        <h2>Contando los días para el gran momento...</h2>
+                        <h2>
+                            {phase === "countdown1" ? (
+                                <p>
+                                    <h1>Hola Marta</h1>
+                                    <img
+                                        src="https://images.vexels.com/media/users/3/136172/isolated/preview/148ec098a4529de7141003a8ec519d39-corazon-como-icono.png"
+                                        alt=""
+                                        width={100}
+                                    />
+                                    <h2>
+                                        Contando los días para el gran
+                                        momento...
+                                    </h2>
+                                </p>
+                            ) : (
+                                <p>
+                                    <img
+                                        src="https://i.pinimg.com/236x/d8/f1/c3/d8f1c377e5e5725fa95263175418ce6e.jpg"
+                                        width={200}
+                                        alt=""
+                                    />
+                                    <br />
+                                    Espera un poquito más... <br />
+                                    <h2>Estamos a un paso de la felicidad</h2>:
+                                </p>
+                            )}
+                        </h2>
                         <p>{countdown}</p>
                     </div>
                 </div>
             )}
 
-            {showContent && (
+            {(phase === "countdown2" || phase === "show") && (
                 <>
                     <div className="wrapperContent">
                         <h1>Últimas Publicaciones</h1>
