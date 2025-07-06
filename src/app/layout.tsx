@@ -8,7 +8,7 @@ import {GoogleAnalytics} from "@next/third-parties/google";
 const inter = Inter({subsets: ["latin"]});
 
 export const metadata: Metadata = {
-    title: "¿Que sera?",
+    title: "Lo siento, Te Quiero Marta",
     // Álbum de Recuerdos Marta y Roberto
     // description: "Con amor, marta y Roberto",
 };
