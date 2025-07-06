@@ -174,6 +174,11 @@ export default function Home() {
                         <h1 style={{color: "red", fontSize: "1.5rem"}}>
                             LO SIENTO
                         </h1>
+                        <img
+                            src="https://upload.wikimedia.org/wikipedia/commons/thumb/f/f1/Heart_coraz%C3%B3n.svg/800px-Heart_coraz%C3%B3n.svg.png"
+                            width={200}
+                            alt=""
+                        />
                         <br />
                         <br />
                         <h1>Últimas Publicaciones</h1>
