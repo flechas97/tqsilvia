@@ -162,6 +162,19 @@ export default function Home() {
             {(phase === "countdown2" || phase === "show") && (
                 <>
                     <div className="wrapperContent">
+                        <h1 style={{color: "red", fontSize: "1.5rem"}}>
+                            No sabes cuanto lo siento, te quiero mas que nada en
+                            el mundo.
+                        </h1>
+                        <p>
+                            Perdoname porfavor, debí haberte dado todo el cariño
+                            que te mereces, soy un gilipollas.
+                        </p>
+                        <h1 style={{color: "red", fontSize: "1.5rem"}}>
+                            LO SIENTO
+                        </h1>
+                        <br />
+                        <br />
                         <h1>Últimas Publicaciones</h1>
                         <p>
                             Bienvenido a la galería de fotos de Marta y Roberto.
