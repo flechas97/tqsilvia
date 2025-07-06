@@ -168,7 +168,8 @@ export default function Home() {
                         </h1>
                         <p>
                             Perdoname porfavor, debí haberte dado todo el cariño
-                            que te mereces, soy un gilipollas.
+                            que te mereces, soy un gilipollas. <br /> Te juro
+                            por mi vida que sere el Roberto cariñoso.
                         </p>
                         <h1 style={{color: "red", fontSize: "1.5rem"}}>
                             LO SIENTO
